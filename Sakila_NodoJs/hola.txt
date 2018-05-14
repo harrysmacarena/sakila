@@ -1,0 +1,4 @@
+Gerente General               Direccion
+Gestión Produccion grafica    Planificación
+Jefe Produccion               Controlar
+Jefe Administrativo           Organizacion
