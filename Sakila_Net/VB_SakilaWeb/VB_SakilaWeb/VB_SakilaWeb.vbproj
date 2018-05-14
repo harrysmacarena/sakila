@@ -1,0 +1,896 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VB_SakilaWeb</RootNamespace>
+    <AssemblyName>VB_SakilaWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="SakilaLib">
+      <HintPath>..\..\VB_SakilaLib\bin\Debug\SakilaLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="App_Data\Trencitos.mdf" />
+    <Content Include="App_Data\Trencitos_log.ldf">
+      <DependentUpon>Trencitos.mdf</DependentUpon>
+    </Content>
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GUIDgv\FrWebMarca.aspx" />
+    <Content Include="GUIDgv\FrWebTrensito.aspx" />
+    <Content Include="WebPrueba.aspx" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="GUIDgv\FrWebActorDgv.aspx" />
+    <Content Include="GUIDgv\FrWebAddressDgv.aspx" />
+    <Content Include="GUIDgv\FrWebCategoryDgv.aspx" />
+    <Content Include="GUIDgv\FrWebCityDgv.aspx" />
+    <Content Include="GUIDgv\FrWebCountryDgv.aspx" />
+    <Content Include="GUIDgv\FrWebCustomerDgv.aspx" />
+    <Content Include="GUIDgv\FrWebFilmActorDgv.aspx" />
+    <Content Include="GUIDgv\FrWebFilmCategoryDgv.aspx" />
+    <Content Include="GUIDgv\FrWebFilmDgv.aspx" />
+    <Content Include="GUIDgv\FrWebFilmTextDgv.aspx" />
+    <Content Include="GUIDgv\FrWebInventoryDgv.aspx" />
+    <Content Include="GUIDgv\FrWebLanguageDgv.aspx" />
+    <Content Include="GUIDgv\FrWebPaymentDgv.aspx" />
+    <Content Include="GUIDgv\FrWebRentalDgv.aspx" />
+    <Content Include="GUIDgv\FrWebStaffDgv.aspx" />
+    <Content Include="GUIDgv\FrWebStoreDgv.aspx" />
+    <Content Include="GUILsb\FrWebActorLsb.aspx" />
+    <Content Include="GUILsb\FrWebAddressLsb.aspx" />
+    <Content Include="GUILsb\FrWebCategoryLsb.aspx" />
+    <Content Include="GUILsb\FrWebCityLsb.aspx" />
+    <Content Include="GUILsb\FrWebCountryLsb.aspx" />
+    <Content Include="GUILsb\FrWebCustomerLsb.aspx" />
+    <Content Include="GUILsb\FrWebFilmActorLsb.aspx" />
+    <Content Include="GUILsb\FrWebFilmCategoryLsb.aspx" />
+    <Content Include="GUILsb\FrWebFilmLsb.aspx" />
+    <Content Include="GUILsb\FrWebFilmTextLsb.aspx" />
+    <Content Include="GUILsb\FrWebInventoryLsb.aspx" />
+    <Content Include="GUILsb\FrWebLanguageLsb.aspx" />
+    <Content Include="GUILsb\FrWebPaymentLsb.aspx" />
+    <Content Include="GUILsb\FrWebRentalLsb.aspx" />
+    <Content Include="GUILsb\FrWebStaffLsb.aspx" />
+    <Content Include="GUILsb\FrWebStoreLsb.aspx" />
+    <Content Include="GUILsv\FrWebActorLsv.aspx" />
+    <Content Include="GUILsv\FrWebAddressLsv.aspx" />
+    <Content Include="GUILsv\FrWebCategoryLsv.aspx" />
+    <Content Include="GUILsv\FrWebCityLsv.aspx" />
+    <Content Include="GUILsv\FrWebCountryLsv.aspx" />
+    <Content Include="GUILsv\FrWebCustomerLsv.aspx" />
+    <Content Include="GUILsv\FrWebFilmActorLsv.aspx" />
+    <Content Include="GUILsv\FrWebFilmCategoryLsv.aspx" />
+    <Content Include="GUILsv\FrWebFilmLsv.aspx" />
+    <Content Include="GUILsv\FrWebFilmTextLsv.aspx" />
+    <Content Include="GUILsv\FrWebInventoryLsv.aspx" />
+    <Content Include="GUILsv\FrWebLanguageLsv.aspx" />
+    <Content Include="GUILsv\FrWebPaymentLsv.aspx" />
+    <Content Include="GUILsv\FrWebRentalLsv.aspx" />
+    <Content Include="GUILsv\FrWebStaffLsv.aspx" />
+    <Content Include="GUILsv\FrWebStoreLsv.aspx" />
+    <Content Include="GUI\FrWebActor.aspx" />
+    <Content Include="GUI\FrWebAddress.aspx" />
+    <Content Include="GUI\FrWebCategory.aspx" />
+    <Content Include="GUI\FrWebCity.aspx" />
+    <Content Include="GUI\FrWebCountry.aspx" />
+    <Content Include="GUI\FrWebCustomer.aspx" />
+    <Content Include="GUI\FrWebFilm.aspx" />
+    <Content Include="GUI\FrWebFilmActor.aspx" />
+    <Content Include="GUI\FrWebFilmCategory.aspx" />
+    <Content Include="GUI\FrWebFilmText.aspx" />
+    <Content Include="GUI\FrWebInventory.aspx" />
+    <Content Include="GUI\FrWebLanguage.aspx" />
+    <Content Include="GUI\FrWebLogin.aspx" />
+    <Content Include="GUI\FrWebPayment.aspx" />
+    <Content Include="GUI\FrWebRental.aspx" />
+    <Content Include="GUI\FrWebStaff.aspx" />
+    <Content Include="GUI\FrWebStore.aspx" />
+    <Content Include="GUI\WebPrueba.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <!--**************************************-->
+    <Compile Include="GUI\FRWebActor.aspx.vb">
+      <DependentUpon>FRWebActor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebActor.aspx.Designer.vb">
+      <DependentUpon>FRWebActor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebActorDgv.aspx.vb">
+      <DependentUpon>FRWebActorDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebActorDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebActorDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebActorLsb.aspx.vb">
+      <DependentUpon>FRWebActorLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebActorLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebActorLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebActorLsv.aspx.vb">
+      <DependentUpon>FRWebActorLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebActorLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebActorLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebAddress.aspx.vb">
+      <DependentUpon>FRWebAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebAddress.aspx.Designer.vb">
+      <DependentUpon>FRWebAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebAddressDgv.aspx.vb">
+      <DependentUpon>FRWebAddressDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebAddressDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebAddressDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebAddressLsb.aspx.vb">
+      <DependentUpon>FRWebAddressLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebAddressLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebAddressLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebAddressLsv.aspx.vb">
+      <DependentUpon>FRWebAddressLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebAddressLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebAddressLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebCategory.aspx.vb">
+      <DependentUpon>FRWebCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebCategory.aspx.Designer.vb">
+      <DependentUpon>FRWebCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebCategoryDgv.aspx.vb">
+      <DependentUpon>FRWebCategoryDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebCategoryDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebCategoryDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebCategoryLsb.aspx.vb">
+      <DependentUpon>FRWebCategoryLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebCategoryLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebCategoryLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebCategoryLsv.aspx.vb">
+      <DependentUpon>FRWebCategoryLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebCategoryLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebCategoryLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebCity.aspx.vb">
+      <DependentUpon>FRWebCity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebCity.aspx.Designer.vb">
+      <DependentUpon>FRWebCity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebCityDgv.aspx.vb">
+      <DependentUpon>FRWebCityDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebCityDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebCityDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebCityLsb.aspx.vb">
+      <DependentUpon>FRWebCityLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebCityLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebCityLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebCityLsv.aspx.vb">
+      <DependentUpon>FRWebCityLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebCityLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebCityLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebCountry.aspx.vb">
+      <DependentUpon>FRWebCountry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebCountry.aspx.Designer.vb">
+      <DependentUpon>FRWebCountry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebCountryDgv.aspx.vb">
+      <DependentUpon>FRWebCountryDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebCountryDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebCountryDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebCountryLsb.aspx.vb">
+      <DependentUpon>FRWebCountryLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebCountryLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebCountryLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebCountryLsv.aspx.vb">
+      <DependentUpon>FRWebCountryLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebCountryLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebCountryLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebCustomer.aspx.vb">
+      <DependentUpon>FRWebCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebCustomer.aspx.Designer.vb">
+      <DependentUpon>FRWebCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebCustomerDgv.aspx.vb">
+      <DependentUpon>FRWebCustomerDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebCustomerDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebCustomerDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebCustomerLsb.aspx.vb">
+      <DependentUpon>FRWebCustomerLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebCustomerLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebCustomerLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebCustomerLsv.aspx.vb">
+      <DependentUpon>FRWebCustomerLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebCustomerLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebCustomerLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebFilm.aspx.vb">
+      <DependentUpon>FRWebFilm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebFilm.aspx.Designer.vb">
+      <DependentUpon>FRWebFilm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebFilmDgv.aspx.vb">
+      <DependentUpon>FRWebFilmDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebFilmDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebFilmLsb.aspx.vb">
+      <DependentUpon>FRWebFilmLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebFilmLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebFilmLsv.aspx.vb">
+      <DependentUpon>FRWebFilmLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebFilmLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebFilmActor.aspx.vb">
+      <DependentUpon>FRWebFilmActor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebFilmActor.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmActor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebFilmActorDgv.aspx.vb">
+      <DependentUpon>FRWebFilmActorDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebFilmActorDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmActorDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebFilmActorLsb.aspx.vb">
+      <DependentUpon>FRWebFilmActorLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebFilmActorLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmActorLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebFilmActorLsv.aspx.vb">
+      <DependentUpon>FRWebFilmActorLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebFilmActorLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmActorLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebFilmCategory.aspx.vb">
+      <DependentUpon>FRWebFilmCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebFilmCategory.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebFilmCategoryDgv.aspx.vb">
+      <DependentUpon>FRWebFilmCategoryDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebFilmCategoryDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmCategoryDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebFilmCategoryLsb.aspx.vb">
+      <DependentUpon>FRWebFilmCategoryLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebFilmCategoryLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmCategoryLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebFilmCategoryLsv.aspx.vb">
+      <DependentUpon>FRWebFilmCategoryLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebFilmCategoryLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmCategoryLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebFilmText.aspx.vb">
+      <DependentUpon>FRWebFilmText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebFilmText.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebFilmTextDgv.aspx.vb">
+      <DependentUpon>FRWebFilmTextDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebFilmTextDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmTextDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebFilmTextLsb.aspx.vb">
+      <DependentUpon>FRWebFilmTextLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebFilmTextLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmTextLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebFilmTextLsv.aspx.vb">
+      <DependentUpon>FRWebFilmTextLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebFilmTextLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebFilmTextLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebInventory.aspx.vb">
+      <DependentUpon>FRWebInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebInventory.aspx.Designer.vb">
+      <DependentUpon>FRWebInventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebInventoryDgv.aspx.vb">
+      <DependentUpon>FRWebInventoryDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebInventoryDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebInventoryDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebInventoryLsb.aspx.vb">
+      <DependentUpon>FRWebInventoryLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebInventoryLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebInventoryLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebInventoryLsv.aspx.vb">
+      <DependentUpon>FRWebInventoryLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebInventoryLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebInventoryLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebLanguage.aspx.vb">
+      <DependentUpon>FRWebLanguage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebLanguage.aspx.Designer.vb">
+      <DependentUpon>FRWebLanguage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebLanguageDgv.aspx.vb">
+      <DependentUpon>FRWebLanguageDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebLanguageDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebLanguageDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebLanguageLsb.aspx.vb">
+      <DependentUpon>FRWebLanguageLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebLanguageLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebLanguageLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebLanguageLsv.aspx.vb">
+      <DependentUpon>FRWebLanguageLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebLanguageLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebLanguageLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebPayment.aspx.vb">
+      <DependentUpon>FRWebPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebPayment.aspx.Designer.vb">
+      <DependentUpon>FRWebPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebPaymentDgv.aspx.vb">
+      <DependentUpon>FRWebPaymentDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebPaymentDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebPaymentDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebPaymentLsb.aspx.vb">
+      <DependentUpon>FRWebPaymentLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebPaymentLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebPaymentLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebPaymentLsv.aspx.vb">
+      <DependentUpon>FRWebPaymentLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebPaymentLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebPaymentLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebRental.aspx.vb">
+      <DependentUpon>FRWebRental.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebRental.aspx.Designer.vb">
+      <DependentUpon>FRWebRental.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebRentalDgv.aspx.vb">
+      <DependentUpon>FRWebRentalDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebRentalDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebRentalDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebRentalLsb.aspx.vb">
+      <DependentUpon>FRWebRentalLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebRentalLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebRentalLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebRentalLsv.aspx.vb">
+      <DependentUpon>FRWebRentalLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebRentalLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebRentalLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebStaff.aspx.vb">
+      <DependentUpon>FRWebStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebStaff.aspx.Designer.vb">
+      <DependentUpon>FRWebStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebStaffDgv.aspx.vb">
+      <DependentUpon>FRWebStaffDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebStaffDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebStaffDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebStaffLsb.aspx.vb">
+      <DependentUpon>FRWebStaffLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebStaffLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebStaffLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebStaffLsv.aspx.vb">
+      <DependentUpon>FRWebStaffLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebStaffLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebStaffLsv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FRWebStore.aspx.vb">
+      <DependentUpon>FRWebStore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FRWebStore.aspx.Designer.vb">
+      <DependentUpon>FRWebStore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebStoreDgv.aspx.vb">
+      <DependentUpon>FRWebStoreDgv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUIDgv\FRWebStoreDgv.aspx.Designer.vb">
+      <DependentUpon>FRWebStoreDgv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsb\FRWebStoreLsb.aspx.vb">
+      <DependentUpon>FRWebStoreLsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsb\FRWebStoreLsb.aspx.Designer.vb">
+      <DependentUpon>FRWebStoreLsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUILsv\FRWebStoreLsv.aspx.vb">
+      <DependentUpon>FRWebStoreLsv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUILsv\FRWebStoreLsv.aspx.Designer.vb">
+      <DependentUpon>FRWebStoreLsv.aspx</DependentUpon>
+    </Compile>
+    <!--************************************************-->
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebPrueba.aspx.designer.vb">
+      <DependentUpon>WebPrueba.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPrueba.aspx.vb">
+      <DependentUpon>WebPrueba.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63608</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63608/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

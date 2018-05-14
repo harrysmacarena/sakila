@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA623FF5-034F-4D2A-907B-B4913DB176EE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ApEscritorio.My.MyApplication</StartupObject>
+    <RootNamespace>ApEscritorio</RootNamespace>
+    <AssemblyName>ApEscritorio</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ApEscritorio.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ApEscritorio.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SakilaLib">
+      <HintPath>..\VB_SakilaLib\bin\Debug\SakilaLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrPersona.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrPersona.Designer.vb">
+      <DependentUpon>FrPersona.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrVacio.Designer.vb">
+      <DependentUpon>FrVacio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrVacio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General.vb" />
+    <Compile Include="GUIMain\FrMenu.designer.vb">
+      <DependentUpon>FrMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUIMain\FrMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIMain\USState.vb" />
+    <Compile Include="GUI\FRActor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRActor.Designer.vb">
+      <DependentUpon>FRActor.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRAddress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRAddress.Designer.vb">
+      <DependentUpon>FRAddress.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRCategory.Designer.vb">
+      <DependentUpon>FRCategory.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRCity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRCity.Designer.vb">
+      <DependentUpon>FRCity.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRCountry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRCountry.Designer.vb">
+      <DependentUpon>FRCountry.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRCustomer.Designer.vb">
+      <DependentUpon>FRCustomer.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRFilm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRFilm.Designer.vb">
+      <DependentUpon>FRFilm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRFilmActor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRFilmActor.Designer.vb">
+      <DependentUpon>FRFilmActor.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRFilmCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRFilmCategory.Designer.vb">
+      <DependentUpon>FRFilmCategory.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRFilmText.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRFilmText.Designer.vb">
+      <DependentUpon>FRFilmText.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRInventory.Designer.vb">
+      <DependentUpon>FRInventory.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRLanguage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRLanguage.Designer.vb">
+      <DependentUpon>FRLanguage.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRPayment.Designer.vb">
+      <DependentUpon>FRPayment.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRRental.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRRental.Designer.vb">
+      <DependentUpon>FRRental.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRStaff.Designer.vb">
+      <DependentUpon>FRStaff.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRStore.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FRStore.Designer.vb">
+      <DependentUpon>FRStore.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRActorDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRActorDGV.Designer.vb">
+      <DependentUpon>FRActorDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRAddressDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRAddressDGV.Designer.vb">
+      <DependentUpon>FRAddressDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRCategoryDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRCategoryDGV.Designer.vb">
+      <DependentUpon>FRCategoryDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRCityDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRCityDGV.Designer.vb">
+      <DependentUpon>FRCityDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRCountryDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRCountryDGV.Designer.vb">
+      <DependentUpon>FRCountryDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRCustomerDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRCustomerDGV.Designer.vb">
+      <DependentUpon>FRCustomerDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRFilmDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRFilmDGV.Designer.vb">
+      <DependentUpon>FRFilmDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRFilmActorDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRFilmActorDGV.Designer.vb">
+      <DependentUpon>FRFilmActorDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRFilmCategoryDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRFilmCategoryDGV.Designer.vb">
+      <DependentUpon>FRFilmCategoryDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRFilmTextDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRFilmTextDGV.Designer.vb">
+      <DependentUpon>FRFilmTextDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRInventoryDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRInventoryDGV.Designer.vb">
+      <DependentUpon>FRInventoryDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRLanguageDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRLanguageDGV.Designer.vb">
+      <DependentUpon>FRLanguageDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRPaymentDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRPaymentDGV.Designer.vb">
+      <DependentUpon>FRPaymentDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRRentalDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRRentalDGV.Designer.vb">
+      <DependentUpon>FRRentalDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRStaffDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRStaffDGV.Designer.vb">
+      <DependentUpon>FRStaffDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRStoreDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFDGV\FRStoreDGV.Designer.vb">
+      <DependentUpon>FRStoreDGV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRActorLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRActorLSV.Designer.vb">
+      <DependentUpon>FRActorLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRAddressLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRAddressLSV.Designer.vb">
+      <DependentUpon>FRAddressLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRCategoryLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRCategoryLSV.Designer.vb">
+      <DependentUpon>FRCategoryLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRCityLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRCityLSV.Designer.vb">
+      <DependentUpon>FRCityLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRCountryLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRCountryLSV.Designer.vb">
+      <DependentUpon>FRCountryLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRCustomerLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRCustomerLSV.Designer.vb">
+      <DependentUpon>FRCustomerLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRFilmLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRFilmLSV.Designer.vb">
+      <DependentUpon>FRFilmLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRFilmActorLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRFilmActorLSV.Designer.vb">
+      <DependentUpon>FRFilmActorLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRFilmCategoryLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRFilmCategoryLSV.Designer.vb">
+      <DependentUpon>FRFilmCategoryLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRFilmTextLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRFilmTextLSV.Designer.vb">
+      <DependentUpon>FRFilmTextLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRInventoryLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRInventoryLSV.Designer.vb">
+      <DependentUpon>FRInventoryLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRLanguageLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRLanguageLSV.Designer.vb">
+      <DependentUpon>FRLanguageLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRPaymentLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRPaymentLSV.Designer.vb">
+      <DependentUpon>FRPaymentLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRRentalLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRRentalLSV.Designer.vb">
+      <DependentUpon>FRRentalLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRStaffLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRStaffLSV.Designer.vb">
+      <DependentUpon>FRStaffLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRStoreLSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSV\FRStoreLSV.Designer.vb">
+      <DependentUpon>FRStoreLSV.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRActorLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRActorLSB.Designer.vb">
+      <DependentUpon>FRActorLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRAddressLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRAddressLSB.Designer.vb">
+      <DependentUpon>FRAddressLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRCategoryLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRCategoryLSB.Designer.vb">
+      <DependentUpon>FRCategoryLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRCityLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRCityLSB.Designer.vb">
+      <DependentUpon>FRCityLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRCountryLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRCountryLSB.Designer.vb">
+      <DependentUpon>FRCountryLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRCustomerLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRCustomerLSB.Designer.vb">
+      <DependentUpon>FRCustomerLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRFilmLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRFilmLSB.Designer.vb">
+      <DependentUpon>FRFilmLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRFilmActorLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRFilmActorLSB.Designer.vb">
+      <DependentUpon>FRFilmActorLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRFilmCategoryLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRFilmCategoryLSB.Designer.vb">
+      <DependentUpon>FRFilmCategoryLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRFilmTextLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRFilmTextLSB.Designer.vb">
+      <DependentUpon>FRFilmTextLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRInventoryLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRInventoryLSB.Designer.vb">
+      <DependentUpon>FRInventoryLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRLanguageLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRLanguageLSB.Designer.vb">
+      <DependentUpon>FRLanguageLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRPaymentLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRPaymentLSB.Designer.vb">
+      <DependentUpon>FRPaymentLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRRentalLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRRentalLSB.Designer.vb">
+      <DependentUpon>FRRentalLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRStaffLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRStaffLSB.Designer.vb">
+      <DependentUpon>FRStaffLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRStoreLSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIINFLSB\FRStoreLSB.Designer.vb">
+      <DependentUpon>FRStoreLSB.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrPersona.resx">
+      <DependentUpon>FrPersona.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrVacio.resx">
+      <DependentUpon>FrVacio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

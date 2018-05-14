@@ -1,0 +1,107 @@
+
+      <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Nombre de la aplicación</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Inicio</a></li>
+                        <li><a runat="server" href="~/About">Acerca de</a></li>
+                        <li><a runat="server" href="~/Contact">Contacto</a></li>
+<!-- **********   Menu para Mantenedores ************* -->
+		                <li class="dropdown">
+		                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mantenedores<span class="caret"></span></a>
+		                  <ul class="dropdown-menu" role="menu">
+                              <li><a runat="server" href="~/GUI/FRWebActor">Actor</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebAddress">Address</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebCategory">Category</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebCity">City</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebCountry">Country</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebCustomer">Customer</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebFilm">Film</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebFilmActor">FilmActor</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebFilmCategory">FilmCategory</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebFilmText">FilmText</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebInventory">Inventory</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebLanguage">Language</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebPayment">Payment</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebRental">Rental</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebStaff">Staff</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebStore">Store</a></li>
+		                  </ul>
+		                </li>
+		                <li class="dropdown">
+		                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Lista GridView<span class="caret"></span></a>
+		                  <ul class="dropdown-menu" role="menu">
+                              <li><a runat="server" href="~/GUIDGV/FRWebActorDgv">Actor</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebAddressDgv">Address</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebCategoryDgv">Category</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebCityDgv">City</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebCountryDgv">Country</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebCustomerDgv">Customer</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebFilmDgv">Film</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebFilmActorDgv">FilmActor</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebFilmCategoryDgv">FilmCategory</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebFilmTextDgv">FilmText</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebInventoryDgv">Inventory</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebLanguageDgv">Language</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebPaymentDgv">Payment</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebRentalDgv">Rental</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebStaffDgv">Staff</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebStoreDgv">Store</a></li>
+		                  </ul>
+		                </li>
+
+		                <li class="dropdown">
+		                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Lista Lsv<span class="caret"></span></a>
+		                  <ul class="dropdown-menu" role="menu">
+                              <li><a runat="server" href="~/GUILSV/FRWebActorLsv">Actor</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebAddressLsv">Address</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebCategoryLsv">Category</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebCityLsv">City</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebCountryLsv">Country</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebCustomerLsv">Customer</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebFilmLsv">Film</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebFilmActorLsv">FilmActor</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebFilmCategoryLsv">FilmCategory</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebFilmTextLsv">FilmText</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebInventoryLsv">Inventory</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebLanguageLsv">Language</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebPaymentLsv">Payment</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebRentalLsv">Rental</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebStaffLsv">Staff</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebStoreLsv">Store</a></li>
+		                  </ul>
+		                </li>
+		                <li class="dropdown">
+		                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Lista Lsb<span class="caret"></span></a>
+		                  <ul class="dropdown-menu" role="menu">
+                              <li><a runat="server" href="~/GUILSB/FRWebActorLsb">Actor</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebAddressLsb">Address</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebCategoryLsb">Category</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebCityLsb">City</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebCountryLsb">Country</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebCustomerLsb">Customer</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebFilmLsb">Film</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebFilmActorLsb">FilmActor</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebFilmCategoryLsb">FilmCategory</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebFilmTextLsb">FilmText</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebInventoryLsb">Inventory</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebLanguageLsb">Language</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebPaymentLsb">Payment</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebRentalLsb">Rental</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebStaffLsb">Staff</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebStoreLsb">Store</a></li>
+		                  </ul>
+		                </li>
+<!-- ********************************************** -->
+                    </ul>
+                </div>
+            </div>
+        </div>

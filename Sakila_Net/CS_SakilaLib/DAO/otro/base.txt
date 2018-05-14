@@ -1,0 +1,500 @@
+  
+  
+  
+        private static ClStore[] arrStore = new ClStore[10];
+        private static List<ClStore> lisStore = new List<ClStore>();
+        private static Hashtable hasStore = new Hashtable();
+//***********************************************************************************************************
+//                                        Arreglos
+//*** Insert		       
+        private static bool arrInsert(ClStore store)
+        {
+            //********** Buscamos si ya existe el registro, si es así entonces lo devolvemos false;
+            for (int x = 0; x < arrStore.Length; x++)
+            {
+                //Para poder preguntar por el contenido de una posición 
+                //primero debemos preguntar si no esta vacío, de lo contrario la aplicación arrojará un error
+                if (arrStore[x] != null)
+                {
+                    // Si es Igual el Id entonces lo encontramos,
+                    if ( ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+                       )
+                    {
+                        // si existe devolvemos false, ya que no debiéramos ingresar otro igual
+                        return false;
+                    }
+                }
+            }
+
+            // En este punto significa que no existe el registro
+            // Buscamos el primer espacio en donde poder depositar nuestra clase;
+            for (int x = 0; x < arrStore.Length; x++)
+            {
+                //Preguntamos si el espacio se encuentra vacio
+                if (arrStore[x] == null)
+                {
+                    //Guardamos la clase completa en la posición vacía encontrada
+                    arrStore[x] = store;
+                    // retornamos true, dando a conocer que fue exitoso
+                    return true;
+                }
+            }
+            // Si llega hasta aquí, significa que no encontró un espacio vacío
+            // por lo tanto no fue exitoso, retornamos false.
+            return false;
+        }
+		
+
+//*** Delete				
+        private static bool arrDelete(ClStore store)
+        {
+            // Buscamos si la posición del registro a eliminar 
+            // en caso de que no lo encuentre, este finalizará retornando un false;
+            for (int x = 0; x < arrStore.Length; x++)
+            {
+                //Para poder preguntar por el contenido de una posición 
+                //primero debemos preguntar si no esta vacío
+                if (arrStore[x] != null)
+                {
+                    // Si es Igual el Id entonces lo encontramos,
+                    if ( ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+                       )                    {
+                        //,por lo tanto destruiremos el objeto con un null
+                        arrStore[x] = null;
+                        //returnamos true avisando que fue exitoso
+                        return true;
+                    }
+                }
+            }
+            // Si llega hasta aquí, significa que no que no lo encontro, retornamos false
+            return false;
+        }
+		
+//Actualizar		
+        private static bool arrUpdate(ClStore store)
+        {
+            // Buscamos si el registro que debe existir en el arreglo;
+            for (int x = 0; x < arrStore.Length; x++)
+            {
+                //Para poder preguntar por el contenido de una posición 
+                //primero debemos preguntar si no esta vacío
+                if (arrStore[x] != null)
+                {
+                    // Si es Igual el Id entonces lo encontramos,
+                    if ( ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+                       )                    {
+                        //Modificamos los campos restantes, uno por uno
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRASIGARR.txt*******************
+
+                        // cuidado no es lo mismo 
+                        // arrRegions[x] = regions
+                        // funciona para un arreglo, pero es incorrecto cuando hay más objetos relacionados.
+
+                        // si modificamos fue exitoso
+                        return true;
+                    }
+                }
+            }
+            // Si llega hasta aquí, significa que no que no lo encontro, retornamos false
+            return false;
+        }		
+		
+//*** Select		
+        private static bool arrSelect(ClStore store)
+        {
+            for (int x = 0; x < arrStore.Length; x++)
+            {
+                //Para poder preguntar por el contenido de una posición 
+                //primero debemos preguntar si no esta vacío
+                if (arrStore[x] != null)
+                {
+                    // Si es Igual el Id entonces lo encontramos.
+                    if ( ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRCOMPARA.txt*******************
+                       )
+                    {
+                        //Rellenamos los campos que faltan de la clase que nos entregan
+                        //regions.RegionId = arrRegions[x].RegionId; // No tiene sentido ya que viene dentro de la clase
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseARRASIGCAM.txt*******************
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+//***********************************************************************************************************
+//                                        Listas
+//*** Insert
+        private static bool lisInsert(ClStore store)
+        {
+            //********** Buscamos si ya existe el registro, si es así entonces lo devolvemos false;
+            for (int x = 0; x < lisStore.Count; x++)
+            {
+                // Ya no preguntamos si el espacio esta vacio, ya que los eliminados no existen
+                // Si es Igual el Id entonces lo encontramos,
+                    if ( ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+                       )
+                    {
+                        // si existe devolvemos false, ya que no debiéramos ingresar otro igual
+                        return false;
+                    }
+            }
+
+            // En este punto significa que no existe el registro
+			// Por lo tanto, es tan simple que agregamos el objeto
+			lisStore.Add(store);
+            return true;
+        }
+		
+		
+//*** Delete		
+        private static bool lisDelete(ClStore store)
+        {
+            // Buscamos si la posición del registro a eliminar 
+            // en caso de que no lo encuentre, este finalizará retornando un false;
+            for (int x = 0; x < lisStore.Count; x++)
+            {
+                // Ya no preguntamos si el espacio esta vacio, ya que los eliminados no existen
+                // Si es Igual el Id entonces lo encontramos,
+                    if ( ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+                       )                    {
+                        //,por lo tanto Removemos el objeto
+                        lisStore.RemoveAt(x);
+                        //returnamos true avisando que fue exitoso
+                        return true;
+                    }
+            }
+            // Si llega hasta aquí, significa que no que no lo encontro, retornamos false
+            return false;
+        }
+		
+//*** Actualizar		
+        private static bool lisUpdate(ClStore store)
+        {
+            // Buscamos si el registro que debe existir en el arreglo;
+            for (int x = 0; x < lisStore.Count; x++)
+            {
+                // Ya no preguntamos si el espacio esta vacio, ya que los eliminados no existen
+                // Si es Igual el Id entonces lo encontramos,
+                    if ( ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+                       )                    {
+                        //Modificamos los campos restantes, uno por uno
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISASIGARR.txt*******************
+
+                        // cuidado no es lo mismo 
+                        // arrRegions[x] = regions
+                        // funciona para un arreglo, pero es incorrecto cuando hay más objetos relacionados.
+
+                        // si modificamos fue exitoso
+                        return true;
+                    }
+            }
+            // Si llega hasta aquí, significa que no que no lo encontro, retornamos false
+            return false;
+        }		
+		
+//*** Select		
+        private static bool lisSelect(ClStore store)
+        {
+            for (int x = 0; x < lisStore.Count; x++)
+            {
+                // Ya no preguntamos si el espacio esta vacio, ya que los eliminados no existen
+                // Si es Igual el Id entonces lo encontramos.
+                    if ( ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISCOMPARA.txt*******************
+                       )
+                    {
+                        //Rellenamos los campos que faltan de la clase que nos entregan
+                        //regions.RegionId = arrRegions[x].RegionId; // No tiene sentido ya que viene dentro de la clase
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseLISASIGCAM.txt*******************
+                        return true;
+                    }
+            }
+            return false;
+        }
+
+//***********************************************************************************************************
+//                                        HashTable
+        private static bool hasInsert(ClStore store)
+        {
+            //********** Buscamos si ya existe el registro, si es así entonces lo devolvemos false;
+            if (hasStore.ContainsKey( ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+)) return false;
+
+            //********** Agregamos utilizando una clave el objeto al hashtable
+            hasStore.Add( ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+,store);
+            return true;
+        }
+
+        private static bool hasDelete(ClStore store)
+        {
+            //********** si NOOOO existe devolvemos false;
+            if (!hasStore.ContainsKey( ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+)) return false;
+
+            //********** Removemos por medio de la clave, no es necesario buscar;
+            hasStore.Remove( ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+);
+            return true;
+
+        }
+
+        private static bool hasUpdate(ClStore store)
+        {
+            //********** si NOOOO existe devolvemos false;
+            if (!hasStore.ContainsKey( ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+)) return false;
+            //Object aux =     hasStore[Store.RegionId];
+			// recordar que solo guardamos objetos, por lo cual hay que realizar un casting
+            ClStore aux = (ClStore)hasStore[ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+];
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASASIGARR.txt*******************
+            return true;
+
+        }
+
+
+        private static bool hasSelect(ClStore store)
+        {
+            //********** si NOOOO existe devolvemos false;
+            if (!hasStore.ContainsKey( ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+			)) return false;
+            //Object aux =     hasRegions[regions.RegionId];
+			// recordar que solo guardamos objetos, por lo cual hay que realizar un casting
+			// Aux es una variable que apunta al objeto
+            ClStore aux = (ClStore)hasStore[ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASNOMBREKEY.txt*******************
+];
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseHASASIGCAM.txt*******************
+            return true;
+
+        }
+
+		
+		
+//***********************************************************************************************************
+//                                        Base de Datos
+
+
+
+		
+		//******** Sql Insert
+        private static DataTable bdSelectAll(int nPagina,int cantidad){
+            String stSql = "Select * from store";
+            return  BD.BD.getInstance().sqlSelect(stSql,nPagina,cantidad);					   
+		}
+        private static bool bdSelect(ClStore store){
+            String stSql = "Select * from store";
+            stSql += " Where  ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVALWhere.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVALWhere.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVALWhere.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVALWhere.txt*******************
+                       ;
+            DataTable dt = BD.BD.getInstance().sqlSelect(stSql);					   
+			return true;
+		}
+        private static bool bdInsert(ClStore store){
+            String stSql  = "insert into Store (";
+            stSql += " ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOM.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOM.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOM.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOM.txt*******************
+";
+            stSql += " )values (";
+            stSql += " ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSVAL.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSVAL.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSVAL.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSVAL.txt*******************
+";
+		    stSql += ")";
+       
+            BD.BD.getInstance().sqlEjecutar(stSql);
+		    return true;
+		}
+        private static bool bdUpdate(ClStore store){
+			
+            String stSql =  "update Store SET ";
+            stSql += " ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVAL.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVAL.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVAL.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVAL.txt*******************
+                       ;
+            stSql += " Where  ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVALWhere.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVALWhere.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVALWhere.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVALWhere.txt*******************
+                       ;
+       
+            BD.BD.getInstance().sqlEjecutar(stSql);
+		    return true;
+		}
+        private static bool bdDelete(ClStore store){
+			
+            String stSql =  "delete from Store ";
+            stSql += " Where  ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVALWhere.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVALWhere.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVALWhere.txt*******************
+ ERROR FILE Not Found ***********D:/Trabajo/GenPrgPlantillas/NetCS/Lib/DAO\otro/HIJObaseINSNOMVALWhere.txt*******************
+                       ;
+       
+            BD.BD.getInstance().sqlEjecutar(stSql);
+		    return true;
+		}
+  
+    /*
+    public bool sqlSelect(bool swCargaClase)
+    {
+         string stSql = "Select * from ciudad"
+                               + " where codigo= " + this.codigo  
+              ;
+         Bd myBd = new Bd();
+         DataTable dt = myBd.sqlSelect(stSql);
+         myBd.close();
+         if (dt.Rows.Count < 1) return false;
+         if (!swCargaClase) return true;
+         this.codregion = dt.Rows[0]["codregion"].ToString();
+         this.descripcion = dt.Rows[0]["descripcion"].ToString();
+         this.codigo = dt.Rows[0]["codigo"].ToString();
+         this.cantidad_personas = int.Parse(dt.Rows[0]["cantidad_personas"].ToString());
+         this.cantidad_restaurantes = int.Parse(dt.Rows[0]["cantidad_restaurantes"].ToString());
+         return true;
+    }
+    public DataTable sqlSelectFill()
+    {
+         string stSql = "Select * from ciudad"
+              ;
+         Bd myBd = new Bd();
+         DataTable dt = myBd.sqlSelect(stSql);
+         myBd.close();
+         return dt;
+    }
+    public DataTable sqlSelectFillSP()
+    {
+         string stSql = "pkg_ciudad.sqlFill";
+         Bd myBd = new Bd();
+         DataTable dt = myBd.sqlSelectSP(stSql);
+         myBd.close();
+         return dt;
+    }
+    public DataTable sqlSelectFillSPOne()
+    {
+         string stSql = "pkg_ciudad.sqlOne";
+         Bd myBd = new Bd();
+         DataTable dt = myBd.sqlSelectSP(stSql,new miParametros[]{
+                                               new miParametros("codigo",this.Codigo.ToString())
+                                                });
+         myBd.close();
+         return dt;
+    }
+    public int sqlInsert()
+    {
+         string stSql = "insert into ciudad("
+                        + "   codregion"
+                        + " , descripcion"
+                        + " , codigo"
+                        + " , cantidad_personas"
+                        + " , cantidad_restaurantes"
+                        + ")values("  
+                        + "   '" + codregion.ToString() + "'"
+                        + " , '" + descripcion.ToString() + "'"
+                        + " , '" + codigo.ToString() + "'"
+                        + " , '" + cantidad_personas.ToString() + "'"
+                        + " , '" + cantidad_restaurantes.ToString() + "'"
+                        + ")";
+         Bd myBd = new Bd();
+         int registros = myBd.sqlExecute(stSql);
+         myBd.close();
+         return registros;
+    }
+    public int sqlUpdate()
+    {
+         string stSql = "update ciudad set "
+                                             + "     codregion  ='" + codregion.ToString() + "'"
+                                             + " ,   descripcion  ='" + descripcion.ToString() + "'"
+                                             + " ,   codigo  ='" + codigo.ToString() + "'"
+                                             + " ,   cantidad_personas  ='" + cantidad_personas.ToString() + "'"
+                                             + " ,   cantidad_restaurantes  ='" + cantidad_restaurantes.ToString() + "'"
+                          +  " where codigo= " + this.codigo  
+                    ;
+         Bd myBd = new Bd();
+         int registros = myBd.sqlExecute(stSql);
+         myBd.close();
+         return registros;
+    }
+    public int sqlDelete()
+    {
+         string stSql = "delete from ciudad  "
+                          +  " where codigo= " + this.codigo  
+                    ;
+         Bd myBd = new Bd();
+         int registros = myBd.sqlExecute(stSql);
+         myBd.close();
+         return registros;
+    }
+    */
+  }

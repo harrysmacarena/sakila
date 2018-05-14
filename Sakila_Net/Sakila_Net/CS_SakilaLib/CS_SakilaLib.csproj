@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8476D9BD-B16D-4F49-B27F-1620CFD5A4F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cl.Harrys.Sakila.lib</RootNamespace>
+    <AssemblyName>CS_SakilaLib</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BD\BD.cs" />
+    <Compile Include="DAO\DAOActor.cs" />
+    <Compile Include="DAO\DAOAddress.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDActor.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDAddress.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDCategory.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDCity.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDCountry.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDCustomer.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDFilm.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDFilmActor.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDFilmCategory.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDFilmText.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDInventory.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDLanguage.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDPayment.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDRental.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDStaff.cs" />
+    <Compile Include="DAO\DAOBD\DAOBDStore.cs" />
+    <Compile Include="DAO\DAOCategory.cs" />
+    <Compile Include="DAO\DAOCity.cs" />
+    <Compile Include="DAO\DAOCountry.cs" />
+    <Compile Include="DAO\DAOCustomer.cs" />
+    <Compile Include="DAO\DAOFilm.cs" />
+    <Compile Include="DAO\DAOFilmActor.cs" />
+    <Compile Include="DAO\DAOFilmCategory.cs" />
+    <Compile Include="DAO\DAOFilmText.cs" />
+    <Compile Include="DAO\DAOInventory.cs" />
+    <Compile Include="DAO\DAOLanguage.cs" />
+    <Compile Include="DAO\DAOPayment.cs" />
+    <Compile Include="DAO\DAORental.cs" />
+    <Compile Include="DAO\DAOStaff.cs" />
+    <Compile Include="DAO\DAOStore.cs" />
+    <Compile Include="Model\Actor.cs" />
+    <Compile Include="Model\Address.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\City.cs" />
+    <Compile Include="Model\Country.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Film.cs" />
+    <Compile Include="Model\FilmActor.cs" />
+    <Compile Include="Model\FilmCategory.cs" />
+    <Compile Include="Model\FilmText.cs" />
+    <Compile Include="Model\Inventory.cs" />
+    <Compile Include="Model\Language.cs" />
+    <Compile Include="Model\Payment.cs" />
+    <Compile Include="Model\Rental.cs" />
+    <Compile Include="Model\Staff.cs" />
+    <Compile Include="Model\Store.cs" />
+    <Compile Include="Neg\NegActor.cs" />
+    <Compile Include="Neg\NegAddress.cs" />
+    <Compile Include="Neg\NegCategory.cs" />
+    <Compile Include="Neg\NegCity.cs" />
+    <Compile Include="Neg\NegCountry.cs" />
+    <Compile Include="Neg\NegCustomer.cs" />
+    <Compile Include="Neg\NegFilm.cs" />
+    <Compile Include="Neg\NegFilmActor.cs" />
+    <Compile Include="Neg\NegFilmCategory.cs" />
+    <Compile Include="Neg\NegFilmText.cs" />
+    <Compile Include="Neg\NegInventory.cs" />
+    <Compile Include="Neg\NegLanguage.cs" />
+    <Compile Include="Neg\NegPayment.cs" />
+    <Compile Include="Neg\NegRental.cs" />
+    <Compile Include="Neg\NegStaff.cs" />
+    <Compile Include="Neg\NegStore.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

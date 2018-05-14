@@ -1,0 +1,160 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CS_SakilaWebForm.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--Para obtener más información sobre la unión de scripts en ScriptManager, consulte https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Scripts de marco--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Scripts del sitio--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Nombre de la aplicación</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Inicio</a></li>
+                        <li><a runat="server" href="~/About">Acerca de</a></li>
+                        <li><a runat="server" href="~/Contact">Contacto</a></li>
+<!-- **********   Menu para Mantenedores ************* -->
+		                <li class="dropdown">
+		                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mantenedores<span class="caret"></span></a>
+		                  <ul class="dropdown-menu" role="menu">
+                              <li><a runat="server" href="~/GUI/FRWebActor">Actor</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebAddress">Address</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebCategory">Category</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebCity">City</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebCountry">Country</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebCustomer">Customer</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebFilm">Film</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebFilmActor">FilmActor</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebFilmCategory">FilmCategory</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebFilmText">FilmText</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebInventory">Inventory</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebLanguage">Language</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebPayment">Payment</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebRental">Rental</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebStaff">Staff</a></li>
+                              <li><a runat="server" href="~/GUI/FRWebStore">Store</a></li>
+		                  </ul>
+		                </li>
+		                <li class="dropdown">
+		                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Lista GridView<span class="caret"></span></a>
+		                  <ul class="dropdown-menu" role="menu">
+                              <li><a runat="server" href="~/GUIDGV/FRWebActorDgv">Actor</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebAddressDgv">Address</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebCategoryDgv">Category</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebCityDgv">City</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebCountryDgv">Country</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebCustomerDgv">Customer</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebFilmDgv">Film</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebFilmActorDgv">FilmActor</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebFilmCategoryDgv">FilmCategory</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebFilmTextDgv">FilmText</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebInventoryDgv">Inventory</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebLanguageDgv">Language</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebPaymentDgv">Payment</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebRentalDgv">Rental</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebStaffDgv">Staff</a></li>
+                              <li><a runat="server" href="~/GUIDGV/FRWebStoreDgv">Store</a></li>
+		                  </ul>
+		                </li>
+
+		                <li class="dropdown">
+		                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Lista Lsv<span class="caret"></span></a>
+		                  <ul class="dropdown-menu" role="menu">
+                              <li><a runat="server" href="~/GUILSV/FRWebActorLsv">Actor</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebAddressLsv">Address</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebCategoryLsv">Category</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebCityLsv">City</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebCountryLsv">Country</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebCustomerLsv">Customer</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebFilmLsv">Film</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebFilmActorLsv">FilmActor</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebFilmCategoryLsv">FilmCategory</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebFilmTextLsv">FilmText</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebInventoryLsv">Inventory</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebLanguageLsv">Language</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebPaymentLsv">Payment</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebRentalLsv">Rental</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebStaffLsv">Staff</a></li>
+                              <li><a runat="server" href="~/GUILSV/FRWebStoreLsv">Store</a></li>
+		                  </ul>
+		                </li>
+		                <li class="dropdown">
+		                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Lista Lsb<span class="caret"></span></a>
+		                  <ul class="dropdown-menu" role="menu">
+                              <li><a runat="server" href="~/GUILSB/FRWebActorLsb">Actor</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebAddressLsb">Address</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebCategoryLsb">Category</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebCityLsb">City</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebCountryLsb">Country</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebCustomerLsb">Customer</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebFilmLsb">Film</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebFilmActorLsb">FilmActor</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebFilmCategoryLsb">FilmCategory</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebFilmTextLsb">FilmText</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebInventoryLsb">Inventory</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebLanguageLsb">Language</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebPaymentLsb">Payment</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebRentalLsb">Rental</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebStaffLsb">Staff</a></li>
+                              <li><a runat="server" href="~/GUILSB/FRWebStoreLsb">Store</a></li>
+		                  </ul>
+		                </li>
+<!-- ********************************************** -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>

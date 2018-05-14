@@ -1,0 +1,6 @@
+D:\Trabajo_Plantillas\Sakila_Net\CS_SakilaLib\obj\Debug\CS_SakilaLib.csprojResolveAssemblyReference.cache
+D:\Trabajo_Plantillas\Sakila_Net\CS_SakilaLib\obj\Debug\CS_SakilaLib.csproj.CoreCompileInputs.cache
+D:\Trabajo_Plantillas\Sakila_Net\CS_SakilaLib\bin\Debug\CS_SakilaLib.dll
+D:\Trabajo_Plantillas\Sakila_Net\CS_SakilaLib\bin\Debug\CS_SakilaLib.pdb
+D:\Trabajo_Plantillas\Sakila_Net\CS_SakilaLib\obj\Debug\CS_SakilaLib.dll
+D:\Trabajo_Plantillas\Sakila_Net\CS_SakilaLib\obj\Debug\CS_SakilaLib.pdb

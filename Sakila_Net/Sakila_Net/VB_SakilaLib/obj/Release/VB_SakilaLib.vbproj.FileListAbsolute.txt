@@ -1,0 +1,10 @@
+D:\Trabajo_Plantillas\Sakila_Net\VB_SakilaLib\bin\Release\SakilaLib.dll
+D:\Trabajo_Plantillas\Sakila_Net\VB_SakilaLib\bin\Release\SakilaLib.pdb
+D:\Trabajo_Plantillas\Sakila_Net\VB_SakilaLib\bin\Release\SakilaLib.xml
+D:\Trabajo_Plantillas\Sakila_Net\VB_SakilaLib\obj\Release\VB_SakilaLib.vbprojResolveAssemblyReference.cache
+D:\Trabajo_Plantillas\Sakila_Net\VB_SakilaLib\obj\Release\SakilaLib.Resources.resources
+D:\Trabajo_Plantillas\Sakila_Net\VB_SakilaLib\obj\Release\VB_SakilaLib.vbproj.GenerateResource.Cache
+D:\Trabajo_Plantillas\Sakila_Net\VB_SakilaLib\obj\Release\VB_SakilaLib.vbproj.CoreCompileInputs.cache
+D:\Trabajo_Plantillas\Sakila_Net\VB_SakilaLib\obj\Release\SakilaLib.dll
+D:\Trabajo_Plantillas\Sakila_Net\VB_SakilaLib\obj\Release\SakilaLib.xml
+D:\Trabajo_Plantillas\Sakila_Net\VB_SakilaLib\obj\Release\SakilaLib.pdb

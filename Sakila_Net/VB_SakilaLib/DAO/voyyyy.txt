@@ -1,0 +1,508 @@
+/*       
+       Public  sqlSelect( store as ClStore) as Boolean
+	   {
+	       switch(BD.BD.swData)
+		   {
+               case typeData.swBd: return bdSelect(store); 
+               case typeData.swArreglo: return arrSelect(store); 
+               case typeData.swLista: return lisSelect(store); 
+               case typeData.swHashTable: return hasSelect(store); 
+
+		   }
+           return false;
+	   End Function
+	   public  bool sqlInsert(ClStore store)
+	   {
+           switch (BD.BD.swData)
+           {
+               case typeData.swBd: return bdInsert(store);
+               case typeData.swArreglo: return arrInsert(store);
+               case typeData.swLista: return lisInsert(store);
+               case typeData.swHashTable: return hasInsert(store);
+           }
+           return false;
+       }
+	   public  bool sqlDelete(ClStore store)
+	   {
+           switch (BD.BD.swData)
+           {
+               case typeData.swBd: return bdDelete(store);
+               case typeData.swArreglo: return arrDelete(store);
+               case typeData.swLista: return lisDelete(store);
+               case typeData.swHashTable: return hasDelete(store);
+           }
+           return false;
+       }
+	   public  bool sqlUpdate(ClStore store)
+	   {
+           switch (BD.BD.swData)
+           {
+               case typeData.swBd: return bdUpdate(store);
+               case typeData.swArreglo: return arrUpdate(store);
+               case typeData.swLista: return lisUpdate(store);
+               case typeData.swHashTable: return hasUpdate(store);
+           }
+           return false;
+       }
+  
+  
+  
+        private  ClStore[] arrStore = new ClStore[10];
+        private  List<ClStore> lisStore = new List<ClStore>();
+        private  Hashtable hasStore = new Hashtable();
+//***********************************************************************************************************
+//                                        Arreglos
+//*** Insert		       
+        private  bool arrInsert(ClStore store)
+        {
+            //********** Buscamos si ya existe el registro, si es así entonces lo devolvemos false;
+            for (int x = 0; x < arrStore.Length; x++)
+            {
+                //Para poder preguntar por el contenido de una posición 
+                //primero debemos preguntar si no esta vacío, de lo contrario la aplicación arrojará un error
+                if (arrStore[x] != null)
+                {
+                    // Si es Igual el Id entonces lo encontramos,
+                    if ( ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+                       )
+                    {
+                        // si existe devolvemos false, ya que no debiéramos ingresar otro igual
+                        return false;
+                    }
+                }
+            }
+
+            // En este punto significa que no existe el registro
+            // Buscamos el primer espacio en donde poder depositar nuestra clase;
+            for (int x = 0; x < arrStore.Length; x++)
+            {
+                //Preguntamos si el espacio se encuentra vacio
+                if (arrStore[x] == null)
+                {
+                    //Guardamos la clase completa en la posición vacía encontrada
+                    arrStore[x] = store;
+                    // retornamos true, dando a conocer que fue exitoso
+                    return true;
+                }
+            }
+            // Si llega hasta aquí, significa que no encontró un espacio vacío
+            // por lo tanto no fue exitoso, retornamos false.
+            return false;
+        }
+		
+
+//*** Delete				
+        private  bool arrDelete(ClStore store)
+        {
+            // Buscamos si la posición del registro a eliminar 
+            // en caso de que no lo encuentre, este finalizará retornando un false;
+            for (int x = 0; x < arrStore.Length; x++)
+            {
+                //Para poder preguntar por el contenido de una posición 
+                //primero debemos preguntar si no esta vacío
+                if (arrStore[x] != null)
+                {
+                    // Si es Igual el Id entonces lo encontramos,
+                    if ( ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+                       )                    {
+                        //,por lo tanto destruiremos el objeto con un null
+                        arrStore[x] = null;
+                        //returnamos true avisando que fue exitoso
+                        return true;
+                    }
+                }
+            }
+            // Si llega hasta aquí, significa que no que no lo encontro, retornamos false
+            return false;
+        }
+		
+//Actualizar		
+        private  bool arrUpdate(ClStore store)
+        {
+            // Buscamos si el registro que debe existir en el arreglo;
+            for (int x = 0; x < arrStore.Length; x++)
+            {
+                //Para poder preguntar por el contenido de una posición 
+                //primero debemos preguntar si no esta vacío
+                if (arrStore[x] != null)
+                {
+                    // Si es Igual el Id entonces lo encontramos,
+                    if ( ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+                       )                    {
+                        //Modificamos los campos restantes, uno por uno
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRASIGARR.txt*******************
+
+                        // cuidado no es lo mismo 
+                        // arrRegions[x] = regions
+                        // funciona para un arreglo, pero es incorrecto cuando hay más objetos relacionados.
+
+                        // si modificamos fue exitoso
+                        return true;
+                    }
+                }
+            }
+            // Si llega hasta aquí, significa que no que no lo encontro, retornamos false
+            return false;
+        }		
+		
+//*** Select		
+        private  bool arrSelect(ClStore store)
+        {
+            for (int x = 0; x < arrStore.Length; x++)
+            {
+                //Para poder preguntar por el contenido de una posición 
+                //primero debemos preguntar si no esta vacío
+                if (arrStore[x] != null)
+                {
+                    // Si es Igual el Id entonces lo encontramos.
+                    if ( ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRCOMPARA.txt*******************
+                       )
+                    {
+                        //Rellenamos los campos que faltan de la clase que nos entregan
+                        //regions.RegionId = arrRegions[x].RegionId; // No tiene sentido ya que viene dentro de la clase
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyARRASIGCAM.txt*******************
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+//***********************************************************************************************************
+//                                        Listas
+//*** Insert
+        private  bool lisInsert(ClStore store)
+        {
+            //********** Buscamos si ya existe el registro, si es así entonces lo devolvemos false;
+            for (int x = 0; x < lisStore.Count; x++)
+            {
+                // Ya no preguntamos si el espacio esta vacio, ya que los eliminados no existen
+                // Si es Igual el Id entonces lo encontramos,
+                    if ( ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+                       )
+                    {
+                        // si existe devolvemos false, ya que no debiéramos ingresar otro igual
+                        return false;
+                    }
+            }
+
+            // En este punto significa que no existe el registro
+			// Por lo tanto, es tan simple que agregamos el objeto
+			lisStore.Add(store);
+            return true;
+        }
+		
+		
+//*** Delete		
+        private  bool lisDelete(ClStore store)
+        {
+            // Buscamos si la posición del registro a eliminar 
+            // en caso de que no lo encuentre, este finalizará retornando un false;
+            for (int x = 0; x < lisStore.Count; x++)
+            {
+                // Ya no preguntamos si el espacio esta vacio, ya que los eliminados no existen
+                // Si es Igual el Id entonces lo encontramos,
+                    if ( ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+                       )                    {
+                        //,por lo tanto Removemos el objeto
+                        lisStore.RemoveAt(x);
+                        //returnamos true avisando que fue exitoso
+                        return true;
+                    }
+            }
+            // Si llega hasta aquí, significa que no que no lo encontro, retornamos false
+            return false;
+        }
+		
+//*** Actualizar		
+        private  bool lisUpdate(ClStore store)
+        {
+            // Buscamos si el registro que debe existir en el arreglo;
+            for (int x = 0; x < lisStore.Count; x++)
+            {
+                // Ya no preguntamos si el espacio esta vacio, ya que los eliminados no existen
+                // Si es Igual el Id entonces lo encontramos,
+                    if ( ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+                       )                    {
+                        //Modificamos los campos restantes, uno por uno
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISASIGARR.txt*******************
+
+                        // cuidado no es lo mismo 
+                        // arrRegions[x] = regions
+                        // funciona para un arreglo, pero es incorrecto cuando hay más objetos relacionados.
+
+                        // si modificamos fue exitoso
+                        return true;
+                    }
+            }
+            // Si llega hasta aquí, significa que no que no lo encontro, retornamos false
+            return false;
+        }		
+		
+//*** Select		
+        private  bool lisSelect(ClStore store)
+        {
+            for (int x = 0; x < lisStore.Count; x++)
+            {
+                // Ya no preguntamos si el espacio esta vacio, ya que los eliminados no existen
+                // Si es Igual el Id entonces lo encontramos.
+                    if ( ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISCOMPARA.txt*******************
+                       )
+                    {
+                        //Rellenamos los campos que faltan de la clase que nos entregan
+                        //regions.RegionId = arrRegions[x].RegionId; // No tiene sentido ya que viene dentro de la clase
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyLISASIGCAM.txt*******************
+                        return true;
+                    }
+            }
+            return false;
+        }
+
+//***********************************************************************************************************
+//                                        HashTable
+        private  bool hasInsert(ClStore store)
+        {
+            //********** Buscamos si ya existe el registro, si es así entonces lo devolvemos false;
+            if (hasStore.ContainsKey( ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+)) return false;
+
+            //********** Agregamos utilizando una clave el objeto al hashtable
+            hasStore.Add( ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+,store);
+            return true;
+        }
+
+        private  bool hasDelete(ClStore store)
+        {
+            //********** si NOOOO existe devolvemos false;
+            if (!hasStore.ContainsKey( ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+)) return false;
+
+            //********** Removemos por medio de la clave, no es necesario buscar;
+            hasStore.Remove( ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+);
+            return true;
+
+        }
+
+        private  bool hasUpdate(ClStore store)
+        {
+            //********** si NOOOO existe devolvemos false;
+            if (!hasStore.ContainsKey( ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+)) return false;
+            //Object aux =     hasStore[Store.RegionId];
+			// recordar que solo guardamos objetos, por lo cual hay que realizar un casting
+            ClStore aux = (ClStore)hasStore[ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+];
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASASIGARR.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASASIGARR.txt*******************
+            return true;
+
+        }
+
+
+        private  bool hasSelect(ClStore store)
+        {
+            //********** si NOOOO existe devolvemos false;
+            if (!hasStore.ContainsKey( ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+			)) return false;
+            //Object aux =     hasRegions[regions.RegionId];
+			// recordar que solo guardamos objetos, por lo cual hay que realizar un casting
+			// Aux es una variable que apunta al objeto
+            ClStore aux = (ClStore)hasStore[ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASNOMBREKEY.txt*******************
+];
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASASIGCAM.txt*******************
+ ERROR FILE Not Found ***********D:\Trabajo\GenPrgPlantillas\NetVB\Lib\DAO/HIJOvoyyyyHASASIGCAM.txt*******************
+            return true;
+
+        }
+
+		
+		
+
+  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //***********************************************************************************************************
+//                                        Base de Datos
+ 
+  
+  //*********************************  
+    public bool sqlSelect(bool swCargaClase)
+    {
+         string stSql = "Select * from ciudad"
+                               + " where codigo= " + this.codigo  
+              ;
+         Bd myBd = new Bd();
+         DataTable dt = myBd.sqlSelect(stSql);
+         myBd.close();
+         if (dt.Rows.Count < 1) return false;
+         if (!swCargaClase) return true;
+         this.codregion = dt.Rows[0]["codregion"].ToString();
+         this.descripcion = dt.Rows[0]["descripcion"].ToString();
+         this.codigo = dt.Rows[0]["codigo"].ToString();
+         this.cantidad_personas = int.Parse(dt.Rows[0]["cantidad_personas"].ToString());
+         this.cantidad_restaurantes = int.Parse(dt.Rows[0]["cantidad_restaurantes"].ToString());
+         return true;
+    }
+    public DataTable sqlSelectFill()
+    {
+         string stSql = "Select * from ciudad"
+              ;
+         Bd myBd = new Bd();
+         DataTable dt = myBd.sqlSelect(stSql);
+         myBd.close();
+         return dt;
+    }
+    public DataTable sqlSelectFillSP()
+    {
+         string stSql = "pkg_ciudad.sqlFill";
+         Bd myBd = new Bd();
+         DataTable dt = myBd.sqlSelectSP(stSql);
+         myBd.close();
+         return dt;
+    }
+    public DataTable sqlSelectFillSPOne()
+    {
+         string stSql = "pkg_ciudad.sqlOne";
+         Bd myBd = new Bd();
+         DataTable dt = myBd.sqlSelectSP(stSql,new miParametros[]{
+                                               new miParametros("codigo",this.Codigo.ToString())
+                                                });
+         myBd.close();
+         return dt;
+    }
+    public int sqlInsert()
+    {
+         string stSql = "insert into ciudad("
+                        + "   codregion"
+                        + " , descripcion"
+                        + " , codigo"
+                        + " , cantidad_personas"
+                        + " , cantidad_restaurantes"
+                        + ")values("  
+                        + "   '" + codregion.ToString() + "'"
+                        + " , '" + descripcion.ToString() + "'"
+                        + " , '" + codigo.ToString() + "'"
+                        + " , '" + cantidad_personas.ToString() + "'"
+                        + " , '" + cantidad_restaurantes.ToString() + "'"
+                        + ")";
+         Bd myBd = new Bd();
+         int registros = myBd.sqlExecute(stSql);
+         myBd.close();
+         return registros;
+    }
+    public int sqlUpdate()
+    {
+         string stSql = "update ciudad set "
+                                             + "     codregion  ='" + codregion.ToString() + "'"
+                                             + " ,   descripcion  ='" + descripcion.ToString() + "'"
+                                             + " ,   codigo  ='" + codigo.ToString() + "'"
+                                             + " ,   cantidad_personas  ='" + cantidad_personas.ToString() + "'"
+                                             + " ,   cantidad_restaurantes  ='" + cantidad_restaurantes.ToString() + "'"
+                          +  " where codigo= " + this.codigo  
+                    ;
+         Bd myBd = new Bd();
+         int registros = myBd.sqlExecute(stSql);
+         myBd.close();
+         return registros;
+    }
+    public int sqlDelete()
+    {
+         string stSql = "delete from ciudad  "
+                          +  " where codigo= " + this.codigo  
+                    ;
+         Bd myBd = new Bd();
+         int registros = myBd.sqlExecute(stSql);
+         myBd.close();
+         return registros;
+    }
+    
+  }
